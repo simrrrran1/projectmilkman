@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billingRecord.BillingSoftwareController">
+   <children>
+      <ListView fx:id="lstAddNames" layoutY="68.0" onMouseClicked="#doFetchRecords" prefHeight="554.0" prefWidth="244.0" />
+      <Label prefHeight="55.0" prefWidth="600.0" text="                Billing Software">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="1.0" layoutY="45.0" prefHeight="21.0" prefWidth="244.0" text="                     Names" />
+      <Label layoutX="274.0" layoutY="78.0" style="-fx-background-color: white;" text="Start Date" />
+      <Label layoutX="266.0" layoutY="304.0" text="Cow Price" />
+      <Label layoutX="418.0" layoutY="412.0" prefHeight="21.0" prefWidth="83.0" text="Buffalo Qty" />
+      <Label layoutX="422.0" layoutY="270.0" text="Buffalo Qty" />
+      <Label layoutX="266.0" layoutY="270.0" text="Cow Qty" />
+      <Label layoutX="274.0" layoutY="118.0" text="End Date" />
+      <Label layoutX="266.0" layoutY="412.0" text="Cow Qty" />
+      <Label layoutX="418.0" layoutY="304.0" text="Buffalo Price" />
+      <Label fx:id="lblDays" layoutX="388.0" layoutY="164.0" prefHeight="21.0" prefWidth="124.0" />
+      <Button layoutX="300.0" layoutY="159.0" mnemonicParsing="false" onAction="#doGetNoOfDays" style="-fx-region-border: white;" text="Get Days" />
+      <TextField fx:id="txt6" layoutX="501.0" layoutY="407.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField fx:id="txt5" layoutX="330.0" layoutY="407.0" prefHeight="31.0" prefWidth="57.0" />
+      <TextField fx:id="txt4" layoutX="508.0" layoutY="299.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField fx:id="txt2" layoutX="336.0" layoutY="299.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField fx:id="txt3" layoutX="508.0" layoutY="265.0" prefHeight="31.0" prefWidth="65.0" />
+      <TextField fx:id="txt1" layoutX="336.0" layoutY="265.0" prefHeight="31.0" prefWidth="65.0" />
+      <Button layoutX="377.0" layoutY="364.0" mnemonicParsing="false" onAction="#doFetchRecordsFromNDB" prefHeight="31.0" prefWidth="108.0" style="-fx-region-border: white;" text="Get Variation" />
+      <Button layoutX="368.0" layoutY="469.0" mnemonicParsing="false" onAction="#doCalculateBill" prefHeight="31.0" prefWidth="135.0" style="-fx-region-border: white;" text="Generate Bill" />
+      <Label layoutX="274.0" layoutY="524.0" text="Payable Amount" />
+      <TextField fx:id="txt7" layoutX="396.0" layoutY="519.0" prefHeight="31.0" prefWidth="135.0" />
+      <Button layoutX="337.0" layoutY="599.0" mnemonicParsing="false" onAction="#doSavePaymentRecords" prefHeight="31.0" prefWidth="92.0" style="-fx-region-border: white;" text="Save " />
+      <Separator layoutX="259.0" layoutY="206.0" prefHeight="3.0" prefWidth="326.0" />
+      <Separator layoutX="259.0" layoutY="345.0" prefHeight="3.0" prefWidth="326.0" />
+      <Separator layoutX="259.0" layoutY="456.0" prefHeight="3.0" prefWidth="326.0" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <DatePicker fx:id="dtp2" layoutX="347.0" layoutY="113.0" prefHeight="31.0" prefWidth="193.0" />
+      <DatePicker fx:id="dtp1" layoutX="347.0" layoutY="73.0" prefHeight="31.0" prefWidth="193.0" />
+      <Label layoutX="335.0" layoutY="220.0" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: white;" text="          Routine Intake" />
+      <Label layoutX="278.0" layoutY="559.0" prefHeight="21.0" prefWidth="109.0" text="Status" />
+      <TextField fx:id="txtStatus" layoutX="396.0" layoutY="554.0" prefHeight="31.0" prefWidth="135.0" text="0" />
+      <Button layoutX="457.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#doSendSMS" prefHeight="31.0" prefWidth="92.0" style="-fx-region-border: white;" text="Send SMS" />
+   </children>
+</AnchorPane>
